@@ -18,6 +18,36 @@ Things we use:
  * We use UIkit (see https://getuikit.com) as an HTML widget library for building user interface components
  * All our backend services are build with Python and typically Flask - which includes the "backend for the frontend".
 
+## What you need to do
+
+Imagine you are tasked with build a user interface to 
+data for experiments run in our lab. Your users don't 
+know exactly what they want but the system produces
+data. This data has been codified into a simple service.
+
+Your task is present concept to the users. While in
+the end you'll need to present a complete solution, the
+task here is to simply give them a flavor for what 
+the design might look like and build a little prototype
+that shows some of the data.
+
+You must:
+
+1. Review the data and design a simple wireframe for navigating the data.
+2. Implement a very small portion of that wireframe in your favorite UI technology.
+3. Document what you have done for us to review in the `docs` folder.
+
+For item (1), this should be a short document with simple line diagrams for the wireframe. It doesn't have to be polished but should contain enough of a description to understand what the full user interface might look like. If you want to embelish the user interface with additional CRUD tasks like "create experiment" / "delete experiment", that's great but not required. We simple want data visualization & navigation.
+
+Keep in mind that there might be thousands of experiments, chemicals, strains, etc. even though the sample data set is small.
+
+For the implementation, we obviously have a preference for React and that would be the simplest way to proceed. If you want to use something else, that is just fine.  All we want to see is that you can hook up your front end to the backend with some aspect of your design.
+
+Also, the user interface doesn't have to be very pretty. That said, you can get a long way for free with
+toolkits like UIkit (see https://getuikit.com). Just don't spend too much time on making it look good.
+
+Keep things brief. We want to see a how you approach the problem and how you communicate. This is less about technical execution as in a real world situation you would have a lot more time to do so.
+
 ## Overview of the data
 
 For this assessment, we'll focus on a vastly simplified data model for incubation
@@ -48,3 +78,83 @@ erDiagram
       string name
    }
 ```
+
+There is sample data in JSON format in the [data](data) directory.
+
+The main data entity is an experiment. A scientist will create an experiment
+with a particular set of inoculants (often only one). An inoculant is
+a strain of bacteria.
+
+The experiment also involves a feedstock that is a mixture of chemical 
+ingredients or a sample. When the ingredients are not known, the list 
+of chemicals is empty.
+
+The entity descriptions are:
+
+ * Experiment - an experiment with a set of inoculants
+ * Strain - a strain of bacteria
+ * Mixture - a stock mixture used in an experiment that is the environment for the innoculant
+ * Chemical - an ingredient in a mixture
+
+## Project setup
+
+You should have your favorite python environment. We recommand using [miniconda](https://docs.conda.io/en/latest/miniconda.html) if you do not already have a python 3.10+ environment.
+
+Setup your environment:
+
+```
+cd uiux
+conda create -n uiux python=3.11
+conda activate uiux
+pip install -r requirements.txt
+```
+
+## Running the service
+
+You can run the service by just running the module:
+
+```
+python -m fe_service
+```
+
+Then open http://localhost:8890/ in your browser. 
+
+## Where to start
+
+Directories:
+
+ * `data` is where all the sample data is located.
+ * `fe_service` is the flask application
+ * `app` is a basic react application
+
+The flask application is setup to serve all the data
+at `/data` using a simple API:
+
+ * `/data/` - the root of the service
+ * `/data/experiments` - lists all the experiments
+ * `/data/experiments/<name>` - returns a specific experiment
+ * `/data/strains` - lists all the strains
+ * `/data/strains/<name>` - returns a specific strain
+ * `/data/mixtures` - lists all the mixtures
+ * `/data/mixtures/<name>` - returns a specific mixture
+ * `/data/chemicals` - lists all the chemicals
+ * `/data/chemicals/<name>` - returns a specific chemical
+
+You should not need to change the Flask application nor the data files. Once you have the application running,
+you can test the data returned via the browser or using curl.
+
+The flask application is setup to serve the static content from `fe_service/frontend`. If you build the React application, it will output the results into that directory.
+
+The React application code is in `app` and can be built with:
+
+```
+npm run build
+```
+
+The output should automatically be in the correct place for the Flask application.
+
+If you are build a React application, just start with the configuration as it already has been provided to you.
+
+If you are using something else, just place the static content and other assets in the `fe_service/frontend` directory. The current content in that direct is the direct result of a React build.
+
+
