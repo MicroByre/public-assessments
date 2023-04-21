@@ -180,6 +180,6 @@ The output should automatically be in the correct place (i.e., `fe_service/front
 
 **If you are building a React application**, just start with the configuration as it has already has been provided to you.
 
-**If you are using something else**, just place the static content and other assets in the `fe_service/frontend` directory. The current content in that direct is the direct result of a React build.
+**If you are using something else**, just place the static content and other assets in the `fe_service/frontend` directory. The current content in that directory is the result of a React build.
 
 
