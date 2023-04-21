@@ -20,7 +20,7 @@ Things we use:
 
 ## What you need to do
 
-Imagine you are tasked with build a user interface to 
+Imagine you are tasked with building a user interface to 
 data for experiments run in our lab. Your users don't 
 know exactly what they want but the system produces
 data. This data has been codified into a simple service.
@@ -54,7 +54,7 @@ for running your implementation.
 Keep in mind:
 
  * Keep things brief. 
- * We want to see a how you approach the problem and how you communicate. 
+ * We want to see how you approach the problem and how you communicate. 
  * This is less about technical execution.
   
 In a real world situation, you would have a lot more time to do all the tasks above
@@ -64,7 +64,7 @@ in a much more complete fashion.
 
 1. Copy all your design documents into the `uiux/docs` folder.
 2. Make sure the `uiux/docs/README.md` file is updated with the list of documents and their purpose.
-3. Ensure any implementation code is in the right places the `uiux` folder.
+3. Ensure any implementation code is in the right places in the `uiux` folder.
 4. Document anything necessary to run your implementation if it is somehow different in the `docs/README.md` file.
 5. Zip up the entire `uiux` directory and return that (e.g., via email).
 
@@ -119,7 +119,7 @@ The entity descriptions are:
 
 ## Project setup
 
-You should have your favorite python environment. We recommand using [miniconda](https://docs.conda.io/en/latest/miniconda.html) if you do not already have a python 3.10+ environment.
+You should have your favorite python environment. We recommend using [miniconda](https://docs.conda.io/en/latest/miniconda.html) if you do not already have a python 3.10+ environment.
 
 Setup your environment:
 
@@ -163,7 +163,7 @@ at `/data` using a simple API:
 
 You should not need to change the Flask application nor the data files. Once you have the application running, you can test the data returned via the browser or using curl.
 
-The flask application is setup to serve the static content from `fe_service/frontend`. If you build the React application, it will output the results into that directory.
+The flask application is set up to serve the static content from `fe_service/frontend`. If you build the React application, it will output the results into that directory.
 
 Also, there are two convenience functions setup in the [App.js](app/src/App.js) 
 for fetching lists (`fetchList`) of data and specific data items (`fetchItem`) and
