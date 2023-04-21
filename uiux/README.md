@@ -25,10 +25,10 @@ data for experiments run in our lab. Your users don't
 know exactly what they want but the system produces
 data. This data has been codified into a simple service.
 
-Your task is present concept to the users. While in
+Your task is to present concept to the users. While in
 the end you'll need to present a complete solution, the
 task here is to simply give them a flavor for what 
-the design might look like and build a little prototype
+the design might look like and to also build a little prototype
 that shows some of the data.
 
 You must:
