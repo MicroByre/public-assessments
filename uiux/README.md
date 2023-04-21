@@ -165,19 +165,21 @@ You should not need to change the Flask application nor the data files. Once you
 
 The flask application is setup to serve the static content from `fe_service/frontend`. If you build the React application, it will output the results into that directory.
 
-The React application code is in `app` and can be built with:
+Also, there are two convenience functions setup in the [App.js](app/src/App.js) 
+for fetching lists (`fetchList`) of data and specific data items (`fetchItem`) and
+examples of their use.
+
+All the preconfigured React application code is in `app` and can be built with:
 
 ```
+cd app
 npm run build
 ```
 
-The output should automatically be in the correct place for the Flask application.
+The output should automatically be in the correct place (i.e., `fe_service/frontend`) for the Flask application. When developing, you can simply just run the npm build and then reload the web page.
 
-If you are building a React application, just start with the configuration as it already has been provided to you.
+**If you are building a React application**, just start with the configuration as it has already has been provided to you.
 
-If you are using something else, just place the static content and other assets in the `fe_service/frontend` directory. The current content in that direct is the direct result of a React build.
-
-Also, there are two convenience functions setup in the [App.js](app/src/App.js) 
-for fetching lists of data and specific data items.
+**If you are using something else**, just place the static content and other assets in the `fe_service/frontend` directory. The current content in that direct is the direct result of a React build.
 
 
