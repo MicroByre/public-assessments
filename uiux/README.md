@@ -37,28 +37,36 @@ You must:
 2. Implement a very small portion of that wireframe in your favorite UI technology.
 3. Document what you have done for us to review.
 
-For item (1), this should be a short document with simple line diagrams for the wireframe. It doesn't have to be polished but it should contain enough of a description to understand what the full user interface might look like. If you want to embelish the user interface with additional CRUD tasks like "create experiment" / "delete experiment", that's great but not required. We simple want data visualization & navigation.
+For item (1), the design:
 
-Use the tools you are familiar with to create the wireframe and design document. If you use Word, Figma, etc., just provide a PDF file of the output.
+ * You should make a short document with simple line diagrams for the wireframe. It doesn't have to be polished but it should contain enough of a description to understand what the full user interface might look like.
+ * If you want to embellish the user interface in the design with additional CRUD tasks like "create experiment" / "delete experiment", that's great but not required. 
+ * We simply want data visualization & navigation.
+ * Use the tools you are familiar with to create the wireframe and design document. If you use Word, Figma, etc., just provide a PDF file of the output.
+ * Keep in mind that there might be thousands of experiments, chemicals, strains, etc. even though the sample data set is small.
 
-Keep in mind that there might be thousands of experiments, chemicals, strains, etc. even though the sample data set is small.
+For item (2), the implementation:
 
-For item (2), the implementation, we obviously have a preference for React and that would be the simplest way to proceed. If you want to use something else, that is just fine.  All we want to see is that you can hook up your front end to the backend with some aspect of your design.
+ * We obviously have a preference for React and that would be the simplest way to proceed.
+ * If you want to use something else, that is just fine.  
+ * All we want to see is that you can hook up your front end to the backend with some aspect of your design.
+ * The user interface doesn't have to be very pretty. 
+ * **Don't spend too much time on making it look good. We aren't looking at that aspect of your implementation**
+ * You can get good results quickly with toolkits like UIkit (see https://getuikit.com)  
 
-Also, the user interface doesn't have to be very pretty. That said, you can get a long way for free with toolkits like UIkit (see https://getuikit.com). Just don't spend too much time on making it look good.
+For item (3), documentation:
 
-For item (3), place all your documentation in the `uiux/docs` folder and update
-the README.md with an inventory of the documentation files and technical instructions
-for running your implementation.
+ * Help us find and navigate what you have done by being clear and concise.
+ * Place all your documentation in the `uiux/docs` folder and update
+the README.md with an inventory of the documentation files
+ * Provide us any additional ttechnical instructions for running your implementation (if any)
 
 Keep in mind:
 
  * Keep things brief (less than 2 hours, 3 hours max). 
  * We want to see how you approach the problem and how you communicate. 
  * This is less about technical execution.
-  
-In a real world situation, you would have a lot more time to do all the tasks above
-in a much more complete fashion.
+ * In a real world situation, you would have a lot more time to do all the tasks.
 
 ## What to turn in
 
