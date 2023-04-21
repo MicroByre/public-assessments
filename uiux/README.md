@@ -39,6 +39,8 @@ You must:
 
 For item (1), this should be a short document with simple line diagrams for the wireframe. It doesn't have to be polished but should contain enough of a description to understand what the full user interface might look like. If you want to embelish the user interface with additional CRUD tasks like "create experiment" / "delete experiment", that's great but not required. We simple want data visualization & navigation.
 
+Use the tools you are familiar with to create the wireframe and design document. If you use Word, Figma, etc., just provide a PDF file of the output.
+
 Keep in mind that there might be thousands of experiments, chemicals, strains, etc. even though the sample data set is small.
 
 For the implementation, we obviously have a preference for React and that would be the simplest way to proceed. If you want to use something else, that is just fine.  All we want to see is that you can hook up your front end to the backend with some aspect of your design.
@@ -47,6 +49,14 @@ Also, the user interface doesn't have to be very pretty. That said, you can get 
 toolkits like UIkit (see https://getuikit.com). Just don't spend too much time on making it look good.
 
 Keep things brief. We want to see a how you approach the problem and how you communicate. This is less about technical execution as in a real world situation you would have a lot more time to do so.
+
+## What to turn in
+
+1. Copy all your design documents into the `docs` folder and make sure the `docs/README.md` file is updated with the list of documents and their purpose.
+2. Ensure any implementation code is in the right places the `uiux` folder.
+3. Document anything necessary to run your implementation if it is somehow different in the `docs/README.md` file.
+4. Zip up the entire `uiux` directory and return that (e.g., via email).
+
 
 ## Overview of the data
 
@@ -153,7 +163,7 @@ npm run build
 
 The output should automatically be in the correct place for the Flask application.
 
-If you are build a React application, just start with the configuration as it already has been provided to you.
+If you are building a React application, just start with the configuration as it already has been provided to you.
 
 If you are using something else, just place the static content and other assets in the `fe_service/frontend` directory. The current content in that direct is the direct result of a React build.
 
