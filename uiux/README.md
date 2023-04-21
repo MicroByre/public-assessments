@@ -16,7 +16,7 @@ Things we use:
  * We currently produce our design documents in a combination of google docs and markdown+mermaid diagrams. Google docs is great for collaboration and markdown along with mermaid and other things can live with the code. 
  * We use React, custom javascript, and things like cytoscape.js for user interface development.
  * We use UIkit (see https://getuikit.com) as an HTML widget library for building user interface components
- * All our backend services are build with Python and typically Flask - which includes the "backend for the frontend".
+ * All our backend services are build with Python and Flask - which includes the "backend for the frontend".
 
 ## What you need to do
 
@@ -35,27 +35,38 @@ You must:
 
 1. Review the data and design a simple wireframe for navigating the data.
 2. Implement a very small portion of that wireframe in your favorite UI technology.
-3. Document what you have done for us to review in the `docs` folder.
+3. Document what you have done for us to review.
 
-For item (1), this should be a short document with simple line diagrams for the wireframe. It doesn't have to be polished but should contain enough of a description to understand what the full user interface might look like. If you want to embelish the user interface with additional CRUD tasks like "create experiment" / "delete experiment", that's great but not required. We simple want data visualization & navigation.
+For item (1), this should be a short document with simple line diagrams for the wireframe. It doesn't have to be polished but it should contain enough of a description to understand what the full user interface might look like. If you want to embelish the user interface with additional CRUD tasks like "create experiment" / "delete experiment", that's great but not required. We simple want data visualization & navigation.
 
 Use the tools you are familiar with to create the wireframe and design document. If you use Word, Figma, etc., just provide a PDF file of the output.
 
 Keep in mind that there might be thousands of experiments, chemicals, strains, etc. even though the sample data set is small.
 
-For the implementation, we obviously have a preference for React and that would be the simplest way to proceed. If you want to use something else, that is just fine.  All we want to see is that you can hook up your front end to the backend with some aspect of your design.
+For item (2), the implementation, we obviously have a preference for React and that would be the simplest way to proceed. If you want to use something else, that is just fine.  All we want to see is that you can hook up your front end to the backend with some aspect of your design.
 
-Also, the user interface doesn't have to be very pretty. That said, you can get a long way for free with
-toolkits like UIkit (see https://getuikit.com). Just don't spend too much time on making it look good.
+Also, the user interface doesn't have to be very pretty. That said, you can get a long way for free with toolkits like UIkit (see https://getuikit.com). Just don't spend too much time on making it look good.
 
-Keep things brief. We want to see a how you approach the problem and how you communicate. This is less about technical execution as in a real world situation you would have a lot more time to do so.
+For item (3), place all your documentation in the `uiux/docs` folder and update
+the README.md with an inventory of the documentation files and technical instructions
+for running your implementation.
+
+Keep in mind:
+
+ * Keep things brief. 
+ * We want to see a how you approach the problem and how you communicate. 
+ * This is less about technical execution.
+  
+In a real world situation, you would have a lot more time to do all the tasks above
+in a much more complete fashion.
 
 ## What to turn in
 
-1. Copy all your design documents into the `docs` folder and make sure the `docs/README.md` file is updated with the list of documents and their purpose.
-2. Ensure any implementation code is in the right places the `uiux` folder.
-3. Document anything necessary to run your implementation if it is somehow different in the `docs/README.md` file.
-4. Zip up the entire `uiux` directory and return that (e.g., via email).
+1. Copy all your design documents into the `uiux/docs` folder.
+2. Make sure the `uiux/docs/README.md` file is updated with the list of documents and their purpose.
+3. Ensure any implementation code is in the right places the `uiux` folder.
+4. Document anything necessary to run your implementation if it is somehow different in the `docs/README.md` file.
+5. Zip up the entire `uiux` directory and return that (e.g., via email).
 
 
 ## Overview of the data
@@ -150,8 +161,7 @@ at `/data` using a simple API:
  * `/data/chemicals` - lists all the chemicals
  * `/data/chemicals/<name>` - returns a specific chemical
 
-You should not need to change the Flask application nor the data files. Once you have the application running,
-you can test the data returned via the browser or using curl.
+You should not need to change the Flask application nor the data files. Once you have the application running, you can test the data returned via the browser or using curl.
 
 The flask application is setup to serve the static content from `fe_service/frontend`. If you build the React application, it will output the results into that directory.
 
@@ -166,5 +176,8 @@ The output should automatically be in the correct place for the Flask applicatio
 If you are building a React application, just start with the configuration as it already has been provided to you.
 
 If you are using something else, just place the static content and other assets in the `fe_service/frontend` directory. The current content in that direct is the direct result of a React build.
+
+Also, there are two convenience functions setup in the [App.js](app/src/App.js) 
+for fetching lists of data and specific data items.
 
 
