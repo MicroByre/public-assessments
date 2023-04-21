@@ -53,7 +53,7 @@ for running your implementation.
 
 Keep in mind:
 
- * Keep things brief. 
+ * Keep things brief (less than 2 hours, 3 hours max). 
  * We want to see how you approach the problem and how you communicate. 
  * This is less about technical execution.
   
