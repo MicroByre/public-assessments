@@ -1,0 +1,10 @@
+{
+   "name" : "E37481",
+   "description" : "On boarding strain antibiotic panel",
+   "inoculant" : [
+      "S345"
+   ],
+   "feedstock" : [
+      "M123"
+   ]
+}

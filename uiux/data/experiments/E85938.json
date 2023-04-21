@@ -1,0 +1,10 @@
+{
+   "name" : "E85938",
+   "description" : "Growth experiment",
+   "inoculant" : [
+      "S789"
+   ],
+   "feedstock" : [
+      "M345"
+   ]
+}
