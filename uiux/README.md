@@ -2,7 +2,7 @@
 
 This assessment is intended to be a short exercise in design and development. We want
 to see a little about how you approach designing user interfaces and little bit of
-development of a user interface. Neither of these have to be complete designs or
+development of a user interface. Neither of these have to be complete designs nor
 implementations. The key outcome here is a clear communication of your approach for
 both.
 
@@ -25,9 +25,9 @@ data for experiments run in our lab. Your users don't
 know exactly what they want but the system produces
 data. This data has been codified into a simple service.
 
-Your task is to present concept to the users. While in
-the end you'll need to present a complete solution, the
-task here is to simply give them a flavor for what 
+Your task is to present a conceptual user interface for accessing 
+the data to the users. While you will eventually need to present a 
+complete solution, the task here is to simply give them a flavor for what 
 the design might look like and to also build a little prototype
 that shows some of the data.
 
@@ -43,7 +43,7 @@ For item (1), the design:
  * If you want to embellish the user interface in the design with additional CRUD tasks like "create experiment" / "delete experiment", that's great but not required. 
  * We simply want data visualization & navigation.
  * Use the tools you are familiar with to create the wireframe and design document. If you use Word, Figma, etc., just provide a PDF file of the output.
- * Keep in mind that there might be thousands of experiments, chemicals, strains, etc. even though the sample data set is small.
+ * For the design, keep in mind that there might be thousands of experiments, chemicals, strains, etc. even though the sample data set is small.
 
 For item (2), the implementation:
 
@@ -51,7 +51,7 @@ For item (2), the implementation:
  * If you want to use something else, that is just fine.  
  * All we want to see is that you can hook up your front end to the backend with some aspect of your design.
  * The user interface doesn't have to be very pretty. 
- * **Don't spend too much time on making it look good. We aren't looking at that aspect of your implementation**
+ * **Don't spend too much time on making it look good. We aren't looking at that aspect of your implementation.**
  * You can get good results quickly with toolkits like UIkit (see https://getuikit.com)  
 
 For item (3), documentation:
@@ -59,14 +59,15 @@ For item (3), documentation:
  * Help us find and navigate what you have done by being clear and concise.
  * Place all your documentation in the `uiux/docs` folder and update
 the README.md with an inventory of the documentation files
- * Provide us any additional ttechnical instructions for running your implementation (if any)
+ * If needed, provide us any additional technical instructions for running your implementation.
 
 Keep in mind:
 
- * Keep things brief (less than 2 hours, 3 hours max). 
+ * Keep things brief and your time spent on this task to less than 2 hours (3 hours max). 
  * We want to see how you approach the problem and how you communicate. 
  * This is less about technical execution.
  * In a real world situation, you would have a lot more time to do all the tasks.
+ * We'll have a chance to discuss your work afterwards as a follow up.
 
 ## What to turn in
 
@@ -127,7 +128,9 @@ The entity descriptions are:
 
 ## Project setup
 
-You should have your favorite python environment. We recommend using [miniconda](https://docs.conda.io/en/latest/miniconda.html) if you do not already have a python 3.10+ environment.
+### Setup python
+
+You should use your favorite python environment. We recommend using [miniconda](https://docs.conda.io/en/latest/miniconda.html) if you do not already have a python 3.11+ environment.
 
 Setup your environment:
 
@@ -138,7 +141,7 @@ conda activate uiux
 pip install -r requirements.txt
 ```
 
-## Running the service
+### Running the service
 
 You can run the service by just running the module:
 
@@ -148,7 +151,7 @@ python -m fe_service
 
 Then open http://localhost:8890/ in your browser. 
 
-## Where to start
+### Where to start
 
 Directories:
 
@@ -156,8 +159,7 @@ Directories:
  * `fe_service` is the flask application
  * `app` is a basic react application
 
-The flask application is setup to serve all the data
-at `/data` using a simple API:
+The flask application is setup to serve all the data at `/data` using a simple API:
 
  * `/data/` - the root of the service
  * `/data/experiments` - lists all the experiments
@@ -177,7 +179,9 @@ Also, there are two convenience functions setup in the [App.js](app/src/App.js)
 for fetching lists (`fetchList`) of data and specific data items (`fetchItem`) and
 examples of their use.
 
-All the preconfigured React application code is in `app` and can be built with:
+### Building React applications
+
+The pre-configured React application code is in `app` and can be built with:
 
 ```
 cd app
